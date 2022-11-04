@@ -1,0 +1,13 @@
+-- /-----------------------------------/
+-- Consultar clientes que SI han hecho compras en un mes especifico con IN.
+-- /-----------------------------------/
+-- SELECT Cli_Id AS 'N° Cliente',
+--   Cli_RazonSocial AS Nombre
+-- FROM clientes
+-- WHERE Cli_Id IN (
+--     SELECT DISTINCT (Ventas_CliId) AS Cliente
+--     FROM ventas
+--     WHERE Ventas_Fecha >= '2018-02-01'
+--       AND Ventas_Fecha < '2018-03-01'
+--   )
+-- ORDER BY Cli_Id
