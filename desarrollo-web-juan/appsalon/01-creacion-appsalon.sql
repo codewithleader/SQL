@@ -1,4 +1,5 @@
 SHOW TABLES;
+
 -- Crear tabla "servicios"
 CREATE TABLE servicios (
   id INT NOT NULL AUTO_INCREMENT,
@@ -6,8 +7,10 @@ CREATE TABLE servicios (
   precio DECIMAL(6, 2) NOT NULL,
   PRIMARY KEY (id)
 );
+
 --
 DESCRIBE servicios;
+
 -- crear tabla "reservaciones"
 CREATE TABLE reservaciones (
   id INT NOT NULL AUTO_INCREMENT,
@@ -18,15 +21,20 @@ CREATE TABLE reservaciones (
   servicios VARCHAR(255) NOT NULL,
   PRIMARY KEY (id)
 );
+
 /* ------------ DEFAULT ? ----------- */
 -- DEFAULT significa que si no le agregan el valor, entonces automaticamente tomará la fecha y la hora en la que se creó ese registro.
 DESCRIBE reservaciones;
+
 SHOW TABLES;
+
 /* -------------------------------------- */
 /* INSERTAR MUCHOS DATOS en Reservaciones */
 /* -------------------------------------- */
-INSERT INTO reservaciones (nombre, apellido, hora, fecha, servicios)
-VALUES (
+INSERT INTO
+  reservaciones (nombre, apellido, hora, fecha, servicios)
+VALUES
+  (
     'Juan',
     'De la torre',
     '10:30:00',
@@ -243,15 +251,21 @@ VALUES (
     '2021-06-25',
     'Corte de Cabello Mujer'
   );
+
 -- Mostrar todos los datos
-SELECT *
-FROM reservaciones;
+SELECT
+  *
+FROM
+  reservaciones;
+
 --
 /* ---------------------------------- */
 /* INSERTAR MUCHOS DATOS EN SERVICIOS */
 /* ---------------------------------- */
-INSERT INTO servicios (nombre, precio)
-VALUES ('Corte de Cabello Niño', 60),
+INSERT INTO
+  servicios (nombre, precio)
+VALUES
+  ('Corte de Cabello Niño', 60),
   ('Corte de Cabello Hombre', 80),
   ('Corte de Barba', 60),
   ('Peinado Mujer', 80),
@@ -260,6 +274,9 @@ VALUES ('Corte de Cabello Niño', 60),
   ('Uñas', 400),
   ('Lavado de Cabello', 50),
   ('Tratamiento Capilar', 150);
+
 -- Mostrar todos los datos
-SELECT *
-FROM servicios;
+SELECT
+  *
+FROM
+  servicios;
