@@ -35,3 +35,12 @@ FROM
   servicios
 WHERE
   precio = 80;
+
+/* ----------- BETWEEN AND ---------- */
+SELECT
+  *
+FROM
+  servicios
+WHERE
+  precio BETWEEN 100
+  AND 200;
