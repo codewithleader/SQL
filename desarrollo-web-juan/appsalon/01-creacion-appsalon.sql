@@ -261,4 +261,5 @@ VALUES ('Corte de Cabello Niño', 60),
   ('Lavado de Cabello', 50),
   ('Tratamiento Capilar', 150);
 -- Mostrar todos los datos
-SELECT * FROM servicios;
+SELECT *
+FROM servicios;
