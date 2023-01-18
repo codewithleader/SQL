@@ -25,3 +25,11 @@ FROM
   servicios
 WHERE
   nombre LIKE '%cabello%';
+
+/* ----- Busqueda por 2 columnas ---- */
+SELECT
+  *
+FROM
+  reservaciones
+WHERE
+  CONCAT(nombre, ' ', apellido) LIKE 'Ana Preciado';
